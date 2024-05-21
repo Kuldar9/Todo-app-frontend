@@ -1,0 +1,167 @@
+body {
+  font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  color: #335d92;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.input-group > * {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.group {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.group:hover {
+  background-color: #f9f9f9;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-name {
+  font-size: 1.5rem;
+  color: #335d92;
+  margin-bottom: 1rem;
+}
+
+.todo-section {
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  word-break: break-word;
+}
+
+.todo-item button {
+  margin-left: 1rem;
+  min-width: 60px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+button.style {
+  margin-left: 0.5rem;
+}
+
+.style {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.5em 1em;
+  color: #335d92;
+  background-color: rgba(68, 107, 158, 0.1);
+  border-radius: 0.5em;
+  border: 2px solid rgba(68, 107, 158, 0);
+  outline: none;
+  width: auto;
+  font-variant-numeric: tabular-nums;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.style:hover {
+  background-color: rgba(68, 107, 158, 0.2);
+}
+
+.focus:focus {
+  border: 2px solid #335d92;
+}
+
+.active:active {
+  background-color: rgba(68, 107, 158, 0.3);
+}
+
+/* Responsive styles for mobile view */
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.5rem;
+  }
+
+  .input-group > * {
+    margin: 0.5rem 0;
+  }
+
+  input.style, button.style {
+    margin-left: 0;
+  }
+
+  .todo-section {
+    padding: 0.5rem;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    padding-bottom: 1rem; 
+    border-bottom: 1px solid #e0e0e0;
+    word-break: break-word; 
+  }
+
+  .todo-item button {
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+}
